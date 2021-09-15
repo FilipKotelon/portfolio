@@ -9,6 +9,9 @@ export const NavContainer = styled.nav`
   ${OtherMixins.fix({ left: '0', top: '0' })}
   ${OtherMixins.rect({ w: '100%', h: '60px' })}
   font-family: ${CssVars.fonts.display};
+  z-index: 1000;
+  transition: ${CssVars.transition};
+  background: ${props => props.isScrolled ? CssVars.colors.white : 'transparent'};
 `
 
 export const NavLink = styled.div`

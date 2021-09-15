@@ -18,13 +18,21 @@ class Nav extends React.Component {
    * Changes the navigation background depending on scroll progress on the page
    */
   handleScroll = () => {
+    const { isScrolled } = this.state;
 
+    if(!isScrolled && window.scrollY > 0){
+      this.setState({ isScrolled: true });
+    } else if(isScrolled && window.scrollY === 0){
+      this.setState({ isScrolled: false });
+    }
   }
 
   render(){
+    const { isScrolled } = this.state;
+
     return(
       <>
-        <NavContainer>
+        <NavContainer isScrolled={isScrolled}>
           <LogoContainer href="/">MCLEO</LogoContainer>
           <NavLink>About me</NavLink>
           <NavLink>My skills</NavLink>
