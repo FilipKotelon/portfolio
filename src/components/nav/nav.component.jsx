@@ -1,5 +1,5 @@
 import React from 'react'
-import { LogoContainer, NavContainer, NavHeight, NavLink } from './nav.styles'
+import { LogoContainer, NavContainer, NavLink } from './nav.styles'
 
 class Nav extends React.Component {
   state = {
@@ -31,7 +31,6 @@ class Nav extends React.Component {
           <NavLink>Projects</NavLink>
           <NavLink>Contact me</NavLink>
         </NavContainer>
-        <NavHeight />
       </>
     )
   }

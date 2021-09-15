@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import FlexMixins from '../../utility/mixins/mixins-flex.styles'
 import OtherMixins from '../../utility/mixins/mixins-other.styles'
-import CssVars from '../../utility/variables.styles';
+import CssVars from '../../utility/variables.styles'
 
 export const NavContainer = styled.nav`
   ${FlexMixins.display({ ai: 'center' })}
@@ -17,13 +17,6 @@ export const NavLink = styled.div`
   padding: 0 13px;
   font-size: 32px;
   cursor: pointer;
-`
-
-/**
- * Holds the space of navigation height
- */
-export const NavHeight = styled.div`
-  height: 60px;
 `
 
 export const LogoContainer = styled.a`
