@@ -10,6 +10,11 @@ export const BigDesc = styled.p`
   line-height: 48px;
 `
 
+export const MediumDesc = styled.p`
+  font-size: 24px;
+  line-height: 33px;
+`
+
 export const SectionTitle = styled.h2`
   font-size: 64px;
 `

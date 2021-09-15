@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import FlexMixins from '../../utility/mixins/mixins-flex.styles'
 import OtherMixins from '../../utility/mixins/mixins-other.styles'

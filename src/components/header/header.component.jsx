@@ -18,6 +18,7 @@ const Header = () => (
       <BrownButton>Nice</BrownButton>
     </HeaderDesc>
     <HeaderImageContainer>
+      {/* Can change this to as HeaderImage */}
       <ShadowBlock size="big" className="header-image">
         <CoverImage src={ HeaderImage } />
       </ShadowBlock>

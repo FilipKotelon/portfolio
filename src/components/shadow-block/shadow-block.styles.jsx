@@ -5,7 +5,6 @@ import CssVars from '../../utility/variables.styles'
 
 export const ShadowBlock = styled.div`
   position: relative;
-  z-index: 1;
 
   &::after{
     position: absolute;
@@ -16,4 +15,9 @@ export const ShadowBlock = styled.div`
     ${OtherMixins.rect({ w: '100%', h: '100%' })}
     background: ${CssVars.colors.tanCrayola};
   }
+`
+
+export const ShadowCard = styled(ShadowBlock)`
+  background: ${CssVars.colors.white};
+  padding: ${props => props.bigPadding ? '15px 40px' : '15px 23px'};
 `
