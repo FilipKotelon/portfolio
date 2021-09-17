@@ -102,6 +102,9 @@ class PathMaker extends React.Component {
     })
   }
 
+  /**
+   * Get waypoints modified in the way they should be rendered.
+   */
   getVisibleWaypoints = (percentage) => {
     const { waypoints } = this.state;
     const { hideChildrenBeforeScroll } = this.props;

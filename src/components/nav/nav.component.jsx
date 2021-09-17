@@ -33,7 +33,7 @@ class Nav extends React.Component {
     return(
       <>
         <NavContainer isScrolled={isScrolled}>
-          <LogoContainer href="/">MCLEO</LogoContainer>
+          <LogoContainer isScrolled={isScrolled} href="/">MCLEO</LogoContainer>
           <NavLink>About me</NavLink>
           <NavLink>My skills</NavLink>
           <NavLink>Projects</NavLink>
