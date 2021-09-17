@@ -18,6 +18,17 @@ export const AboutContainer = styled.section`
 export const AboutCard = styled(ShadowCard)`
   width: 600px;
   ${FlexMixins.display({ ai: 'flex-start' })}
+  transition: ${CssVars.transition};
+
+  &::after{
+    transition: ${CssVars.transition}${ ({shown}) => shown ? ' .3s' : ''};
+    opacity: ${ ({shown}) => shown ? '1' : '0'};
+  }
+
+  &::before{
+    transition: ${CssVars.transition}${ ({shown}) => shown ? '' : ' .3s'};
+    opacity: ${ ({shown}) => shown ? '1' : '0'};
+  }
 `
 
 export const AboutCardNumber = styled.div`

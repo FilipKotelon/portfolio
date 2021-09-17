@@ -15,7 +15,7 @@ const About = () => (
       </SectionTitle>
     </ShadowCard>
 
-    <PathMaker className="path-maker">
+    <PathMaker className="path-maker" hideChildrenBeforeScroll={true}>
 
       <PathMakerWaypoint left="20%" as={AboutCard}>
         <AboutCardNumber>

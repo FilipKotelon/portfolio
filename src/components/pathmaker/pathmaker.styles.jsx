@@ -4,7 +4,7 @@ import FlexMixins from '../../utility/mixins/mixins-flex.styles'
 import OtherMixins from '../../utility/mixins/mixins-other.styles'
 import CssVars from '../../utility/variables.styles'
 
-const PATH_WIDTH = '10px';
+const PATH_WIDTH = 10;
 
 export const PathMakerContainer = styled.div`
   position: relative;
@@ -13,7 +13,9 @@ export const PathMakerContainer = styled.div`
 
 export const PathMakerWaypoint = styled.div`
   position: relative;
-  left: ${props => props.left ? props.left : '0'};
+  left: ${ ({ left }) => left ? left : '0'};
+  transition: ${CssVars.transition};
+  opacity: ${ ({ shown }) => shown ? '1' : '0'};
 `
 
 export const PathMakerChildrenContainer = styled.div`
@@ -29,10 +31,15 @@ export const PathContainer = styled.svg`
 
 export const ThePath = styled.path`
   stroke: ${CssVars.colors.darkLava};
-  stroke-width: ${PATH_WIDTH};
+  stroke-width: ${PATH_WIDTH}px;
+  fill: none;
+  opacity: ${ ({visible}) => visible ? '1' : '0' };
+  transition: all .1s;
 `
 
 export const Unfolder = styled.path`
   stroke: ${CssVars.colors.creamWhite};
-  stroke-width: ${PATH_WIDTH};
+  stroke-width: ${PATH_WIDTH + 2}px;
+  fill: none;
+  transition: all .2s;
 `
