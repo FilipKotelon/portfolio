@@ -1,5 +1,6 @@
 import React from 'react'
-import { LogoContainer, NavContainer, NavLink } from './nav.styles'
+import NavLinks from './nav-links.component'
+import { NavContainer } from './nav.styles'
 
 class Nav extends React.Component {
   state = {
@@ -33,11 +34,7 @@ class Nav extends React.Component {
     return(
       <>
         <NavContainer isScrolled={isScrolled}>
-          <LogoContainer isScrolled={isScrolled} href="/">MCLEO</LogoContainer>
-          <NavLink>About me</NavLink>
-          <NavLink>My skills</NavLink>
-          <NavLink>Projects</NavLink>
-          <NavLink>Contact me</NavLink>
+          <NavLinks isScrolled={isScrolled} />
         </NavContainer>
       </>
     )

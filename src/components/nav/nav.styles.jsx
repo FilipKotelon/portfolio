@@ -20,9 +20,11 @@ export const NavLink = styled.div`
   height: 100%;
   padding: 0 13px;
   cursor: pointer;
+  ${ ({ active }) => active ? `color: ${CssVars.colors.tanCrayola};` : `` }
+  transition: ${CssVars.transition};
 `
 
-export const LogoContainer = styled.a`
+export const LogoContainer = styled.div`
   ${FlexMixins.display({ center: true })}
   ${OtherMixins.rect({ w: '110px', h: '100%' })}
   background: ${CssVars.colors.tanCrayola};
@@ -30,4 +32,5 @@ export const LogoContainer = styled.a`
   font-size: ${ ({ isScrolled }) => isScrolled ? '32px' : '48px' };
   transition: ${CssVars.transition};
   margin-right: 13px;
+  cursor: pointer;
 `

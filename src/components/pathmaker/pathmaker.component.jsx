@@ -85,20 +85,20 @@ class PathMaker extends React.Component {
       }
     })
 
-    let pathCoords = '';
+    let pathDefinition = '';
 
     //Create a path definition based on coords
     waypointsCoords.forEach((coord, i) => {
       if(i === 0){
-        pathCoords += `M ${coord.x} ${coord.y} `;
+        pathDefinition += `M ${coord.x} ${coord.y} `;
       } else {
         //The first two coords are for the point that the path goes through. The last two are for the point that the path "bends" towards
-        pathCoords += `S${coord.x},${coord.y}, ${coord.x + 100},${coord.y + 100} `;
+        pathDefinition += `S${coord.x},${coord.y}, ${coord.x + 100},${coord.y + 100} `;
       }
     })
 
     this.setState({
-      pathDefinition: pathCoords
+      pathDefinition
     })
   }
 
