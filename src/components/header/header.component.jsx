@@ -4,9 +4,9 @@ import { BrownButton } from '../button/button.styles'
 import { CoverImage } from '../images/images.styles'
 import { ShadowBlock } from '../shadow-block/shadow-block.styles'
 import { BigDesc, BigTitle } from '../typography/typography.styles'
-import { HeaderContainer, HeaderDesc, HeaderImageContainer } from './header.styles'
+import { HeaderContainer, HeaderDesc, HeaderImageContainer, HeaderImage } from './header.styles'
 
-import HeaderImage from '../../assets/photos/placeholder-me.png'
+import HeaderImageUrl from '../../assets/photos/me.png'
 
 const Header = () => (
   <HeaderContainer>
@@ -18,10 +18,9 @@ const Header = () => (
       <BrownButton>Nice</BrownButton>
     </HeaderDesc>
     <HeaderImageContainer>
-      {/* Can change this to as HeaderImage */}
-      <ShadowBlock size="big" className="header-image">
-        <CoverImage src={ HeaderImage } />
-      </ShadowBlock>
+      <HeaderImage size="big" className="header-image">
+        <CoverImage src={ HeaderImageUrl } />
+      </HeaderImage>
     </HeaderImageContainer>
   </HeaderContainer>
 )

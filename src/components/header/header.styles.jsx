@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import FlexMixins from '../../utility/mixins/mixins-flex.styles'
 import OtherMixins from '../../utility/mixins/mixins-other.styles'
 import CssVars from '../../utility/variables.styles'
+import { ShadowBlock } from '../shadow-block/shadow-block.styles';
 import { Slide } from '../slide/slide.styles';
 
 export const HeaderContainer = styled(Slide)`
@@ -28,8 +29,8 @@ export const HeaderDesc = styled.div`
 export const HeaderImageContainer = styled.div`
   ${FlexMixins.display({ center: true })}
   height: 100%;
+`
 
-  & .header-image{
-    ${OtherMixins.rect({ w: '540px', h: '830px' })}
-  }
+export const HeaderImage = styled(ShadowBlock)`
+  ${OtherMixins.rect({ w: '540px', h: '830px' })}
 `

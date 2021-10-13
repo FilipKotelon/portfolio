@@ -1,0 +1,28 @@
+.skills-popup-enter {
+  opacity: 0.01;
+}
+
+.skills-popup-enter.skills-popup-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.skills-popup-leave {
+  opacity: 1;
+}
+
+.skills-popup-leave.skills-popup-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms;
+}
+
+.skills-popup-appear {
+  opacity: 0.01;
+  position: fixed;
+  z-index: 500;
+}
+
+.skills-popup-appear.skills-popup-appear-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
