@@ -94,6 +94,8 @@ class PathMaker extends React.Component {
       } else {
         //The first two coords are for the point that the path goes through. The last two are for the point that the path "bends" towards
         pathDefinition += `S${coord.x},${coord.y}, ${coord.x + 100},${coord.y + 100} `;
+
+        console.log(coord);
       }
     })
 

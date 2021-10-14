@@ -1,10 +1,15 @@
 import React from 'react'
+import { useScrollSection } from 'react-scroll-section'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import { ProjectsContainer, ProjectsSectionDesc, SingleProject, SingleProjectImg, SingleProjectDesc, ProjectsSectionDescCard, SingleProjectComingSoon, SingleProjectTags } from './projects.styles'
-import SanctearyImg from '../../assets/photos/sancteary.png'
-import SolutionPeopleImg from '../../assets/photos/solution-people.png'
 import { SectionTitle, SmallDesc, MediumTitle, BigDesc, MediumDesc, Clickable, Tag } from '../typography/typography.styles'
-import { useScrollSection } from 'react-scroll-section'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+
+import SanctearyImg from '../../assets/photos/sancteary.png'
+import SanctearyImgMin from '../../assets/photos/sancteary-min.png'
+import SolutionPeopleImg from '../../assets/photos/solution-people.png'
+import SolutionPeopleImgMin from '../../assets/photos/solution-people-min.png'
 
 const Projects = () => {
   const contactSection = useScrollSection('contact');
@@ -26,7 +31,14 @@ const Projects = () => {
       </ProjectsSectionDesc>
   
       <SingleProject>
-        <SingleProjectImg src={SolutionPeopleImg} />
+
+        <SingleProjectImg
+          as={ LazyLoadImage }
+          effect="blur"
+          src={ SolutionPeopleImg }
+          placeholderSrc={ SolutionPeopleImgMin }
+          className="single-project-img"
+        />
         <SingleProjectDesc bigPadding={true}>
           <MediumTitle>
             Solution People
@@ -42,15 +54,23 @@ const Projects = () => {
           <Tag>TypeScript</Tag>
           <Tag>Sass</Tag>
         </SingleProjectTags>
+
       </SingleProject>
   
       <SingleProject comingSoon={true}>
+
         <SingleProjectComingSoon>
           <MediumDesc>
             This project is currently in development. <Clickable onClick={contactSection.onClick}>Contact me</Clickable> if you want to know more!
           </MediumDesc>
         </SingleProjectComingSoon>
-        <SingleProjectImg src={SanctearyImg} />
+        <SingleProjectImg
+          as={ LazyLoadImage }
+          effect="blur"
+          src={ SanctearyImg }
+          placeholderSrc={ SanctearyImgMin }
+          className="single-project-img"
+        />
         <SingleProjectDesc bigPadding={true}>
           <MediumTitle>
             Sancteary
@@ -67,6 +87,7 @@ const Projects = () => {
           <Tag>Sass</Tag>
           <Tag>NgRx</Tag>
         </SingleProjectTags>
+
       </SingleProject>
   
     </ProjectsContainer>

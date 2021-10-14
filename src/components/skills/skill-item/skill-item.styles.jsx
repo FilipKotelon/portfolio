@@ -15,6 +15,12 @@ export const SkillItemCon = styled.div`
     z-index: 100;
   }
 
+  & .lazy-load-image-background{
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+  }
+
   &:hover{
     & .skill-item-bg{
       transform: translate(-50%, -50%) scale(1.1);

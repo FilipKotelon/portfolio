@@ -31,9 +31,14 @@ export const SingleProject = styled.div`
   position: relative;
   overflow: hidden;
 
+  & .lazy-load-image-background{
+    ${OtherMixins.abs({ left: '0', top: '0' })}
+    ${OtherMixins.square('100%')}
+  }
+
   ${({ comingSoon }) => comingSoon ? `` : `
     &:hover{
-      & > img{
+      & .single-project-img{
         filter: brightness(.85);
         transform: translate(-50%, -50%) scale(1.05);
       }
@@ -45,7 +50,7 @@ export const SingleProjectImg = styled(CoverImage)`
   ${OtherMixins.absCenter}
   filter: brightness(.65);
   transform: translate(-50%, -50%) scale(1.01);
-  transition: all .5s;
+  transition: all .5s !important;
   z-index: 0;
   cursor: pointer;
 `

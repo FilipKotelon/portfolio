@@ -5,6 +5,8 @@ import { SkillItemBg, SkillItemCon, SkillItemImage } from './skill-item.styles'
 import { CSSTransitionGroup } from 'react-transition-group'
 
 import './skill-item.styles.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/opacity.css'
 
 class SkillItem extends React.Component {
   state = {
@@ -32,7 +34,12 @@ class SkillItem extends React.Component {
     return (
       <SkillItemCon>
         <SkillItemBg onClick={ () => this.openPopup() } className="skill-item-bg" />
-        <SkillItemImage onClick={ () => this.openPopup() } src={ thumb } />
+        <SkillItemImage 
+          as={ LazyLoadImage }
+          effect="opacity"
+          onClick={ () => this.openPopup() }
+          src={ thumb }
+        />
         <CSSTransitionGroup
           nodeRef={ this.transitionGroupRef }
           className="transition-container"
