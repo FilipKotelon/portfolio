@@ -18,8 +18,6 @@
 
 .skills-popup-appear {
   opacity: 0.01;
-  position: fixed;
-  z-index: 500;
 }
 
 .skills-popup-appear.skills-popup-appear-active {

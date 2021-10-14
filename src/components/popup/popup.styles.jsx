@@ -35,7 +35,7 @@ export const PopupContentCon = styled.div`
   background: ${CssVars.colors.white};
   border-radius: 3px;
   max-width: 840px;
-  padding: 40px 25px 25px;
+  padding: 60px 30px 45px;
   z-index: 1;
 `
 
@@ -52,6 +52,12 @@ export const PopupContentImg = styled.img`
 
 export const PopupContentDesc = styled.div`
   font-size: 24px;
+
+  & h3{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
 `
 
 export const PopupClose = styled.img`

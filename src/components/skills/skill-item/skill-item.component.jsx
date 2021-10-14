@@ -35,6 +35,7 @@ class SkillItem extends React.Component {
         <SkillItemImage onClick={ () => this.openPopup() } src={ thumb } />
         <CSSTransitionGroup
           nodeRef={ this.transitionGroupRef }
+          className="transition-container"
           transitionName="skills-popup"
           transitionAppear={true}
           transitionAppearTimeout={300}

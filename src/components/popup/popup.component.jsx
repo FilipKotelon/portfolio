@@ -40,7 +40,11 @@ class Popup extends React.Component {
         <PopupContentCon>
           <PopupClose onClick={ () => this.close() } src={ CloseImg } />
           <PopupContent>
-            <PopupContentImg src={ contentImg } />
+            {
+              contentImg 
+                ? <PopupContentImg src={ contentImg } />
+                : null
+            }
             <PopupContentDesc>
               { children }
             </PopupContentDesc>

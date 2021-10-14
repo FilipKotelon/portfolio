@@ -138,6 +138,24 @@ class OtherMixins {
       ${rounded ? `border-radius: 10px;` : ``}
     }
   `
+
+  static generateSimpleGradient = ({dir, bg1, bg2}) => `linear-gradient(to ${dir}, ${bg1}, ${bg2})`
+
+  static hoverUnderline = ({h, top, bg, dist, w = '100%', dir = 'right'}) => css`
+    background-image: ${this.generateSimpleGradient({dir, bg1: bg, bg2: bg})};
+    background-size: 0% ${h};
+    background-position: 0 ${top};
+    background-repeat: no-repeat;
+    transition: all .3s;
+
+    position: relative;
+    padding-bottom: ${dist + h};
+    margin-bottom: -${dist + h};
+
+    &:hover{
+      background-size: ${w} ${h};
+    }
+  `
 }
 
 export default OtherMixins;

@@ -21,4 +21,8 @@ export const SkillsTitleInfo = styled.div`
 
 export const SkillsSection = styled.div`
   ${FlexMixins.display({ center: 'true', wrap: 'wrap' })}
+
+  &:not(:last-child){
+    margin-bottom: 60px;
+  }
 `

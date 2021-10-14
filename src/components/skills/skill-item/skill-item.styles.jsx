@@ -8,6 +8,12 @@ export const SkillItemCon = styled.div`
   ${OtherMixins.square('260px')}
   ${FlexMixins.display({ center: true })}
   position: relative;
+  margin: 0 20px 40px;
+
+  & .transition-container{
+    position: relative;
+    z-index: 100;
+  }
 
   &:hover{
     & .skill-item-bg{

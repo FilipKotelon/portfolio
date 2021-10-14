@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShadowCard } from '../shadow-block/shadow-block.styles'
-import { SectionTitle } from '../typography/typography.styles'
+import { Clickable, SectionTitle } from '../typography/typography.styles'
 
 import { ContactContainer, ContactDesc } from './contact.styles'
 
@@ -19,10 +19,10 @@ const Contact = () => (
       </ContactDesc>
     </ShadowCard>
     <ShadowCard>
-      <a href="mailto:off.f.kotelon@gmail.com">off.f.kotelon@gmail.com</a>
+      <Clickable as="a" href="mailto:off.f.kotelon@gmail.com">off.f.kotelon@gmail.com</Clickable>
     </ShadowCard>
     <ShadowCard>
-      <a >Linkedin</a>
+      <Clickable as="a" href="https://www.linkedin.com/in/filip-kotelon/" rel="nofollow" target="_blank">Linkedin</Clickable>
     </ShadowCard>
   </ContactContainer>
 )
