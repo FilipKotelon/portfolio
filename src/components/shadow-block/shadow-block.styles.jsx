@@ -8,17 +8,31 @@ export const ShadowBlock = styled.div`
 
   &::after{
     position: absolute;
-    left: ${props => props.size === 'big' ? '-20px' : '-10px'};
-    bottom: ${props => props.size === 'big' ? '-20px' : '-10px'};
     z-index: -1;
     content: '';
     ${OtherMixins.square('100%')}
     background: ${CssVars.colors.tanCrayola};
+
+    @media(min-width: 993px){
+      left: ${props => props.size === 'big' ? '-20px' : '-10px'};
+      bottom: ${props => props.size === 'big' ? '-20px' : '-10px'};
+    }
+
+    @media(max-width: 992px){
+      left: ${props => props.size === 'big' ? '-10px' : '-5px'};
+      bottom: ${props => props.size === 'big' ? '-10px' : '-5px'};
+    }
   }
 `
 
 export const ShadowCard = styled(ShadowBlock)`
-  padding: ${props => props.bigPadding ? '15px 40px' : '15px 23px'};
+  @media(min-width: 577px){
+    padding: ${props => props.bigPadding ? '15px 40px' : '15px 23px'};
+  }
+
+  @media(max-width: 576px){
+    padding: ${props => props.bigPadding ? '12px 20px' : '12px 15px'};
+  }
 
   & > *{
     position: relative;

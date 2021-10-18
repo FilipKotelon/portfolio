@@ -10,6 +10,11 @@ import { Slide } from '../slide/slide.styles';
 export const ProjectsContainer = styled(Slide)`
   ${FlexMixins.display({})}
   position: relative;
+
+  @media(max-width: 1200px){
+    height: auto;
+    flex-direction: column;
+  }
 `
 
 export const ProjectsSectionDesc = styled.div`
@@ -17,11 +22,20 @@ export const ProjectsSectionDesc = styled.div`
   top: 60px;
   z-index: 200;
   ${OtherMixins.mNotLast({ margin: '24px', dir: 'bottom' })}
+
+  @media(max-width: 1200px){
+    position: static;
+    transform: none;
+    margin: 60px auto;
+    padding: 0 15px;
+    max-width: 100%;
+  }
 `
 
 export const ProjectsSectionDescCard = styled(ShadowCard)`
   width: 520px;
   text-align: center;
+  max-width: 100%;
 `
 
 export const SingleProject = styled.div`
@@ -30,6 +44,11 @@ export const SingleProject = styled.div`
   padding: 60px;
   position: relative;
   overflow: hidden;
+
+  @media(max-width: 1200px){
+    width: 100%;
+    padding: 120px 30px 120px;
+  }
 
   & .lazy-load-image-background{
     ${OtherMixins.abs({ left: '0', top: '0' })}
@@ -78,7 +97,9 @@ export const SingleProjectComingSoon = styled.div`
   ${OtherMixins.abs({ left: '0', top: '0' })}
   ${OtherMixins.square('100%')}
   ${FlexMixins.display({ center: true })}
+  text-align: center;
   z-index: 100;
   background: rgba(0, 0, 0, .75);
   color: ${CssVars.colors.white};
+  padding: 15px;
 `

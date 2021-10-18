@@ -152,8 +152,10 @@ class OtherMixins {
     padding-bottom: ${dist + h};
     margin-bottom: -${dist + h};
 
-    &:hover{
-      background-size: ${w} ${h};
+    @media(hover: hover){
+      &:hover{
+        background-size: ${w} ${h};
+      }
     }
   `
 }

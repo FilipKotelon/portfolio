@@ -2,7 +2,7 @@ import React from 'react'
 import { ShadowCard } from '../shadow-block/shadow-block.styles'
 import { Clickable, SectionTitle } from '../typography/typography.styles'
 
-import { ContactContainer, ContactDesc } from './contact.styles'
+import { ContactContainer, ContactDesc, ContactInfo } from './contact.styles'
 
 const Contact = () => (
   <ContactContainer>
@@ -18,12 +18,14 @@ const Contact = () => (
         I’d love to hear from you!
       </ContactDesc>
     </ShadowCard>
-    <ShadowCard>
-      <Clickable as="a" href="mailto:off.f.kotelon@gmail.com">off.f.kotelon@gmail.com</Clickable>
-    </ShadowCard>
-    <ShadowCard>
-      <Clickable as="a" href="https://www.linkedin.com/in/filip-kotelon/" rel="nofollow" target="_blank">Linkedin</Clickable>
-    </ShadowCard>
+    <ContactInfo>
+      <ShadowCard>
+        <Clickable as="a" href="mailto:off.f.kotelon@gmail.com">off.f.kotelon@gmail.com</Clickable>
+      </ShadowCard>
+      <ShadowCard>
+        <Clickable as="a" href="https://www.linkedin.com/in/filip-kotelon/" rel="nofollow" target="_blank">Linkedin</Clickable>
+      </ShadowCard>
+    </ContactInfo>
   </ContactContainer>
 )
 

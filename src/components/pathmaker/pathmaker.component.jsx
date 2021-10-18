@@ -36,7 +36,15 @@ class PathMaker extends React.Component {
   }
 
   componentDidMount(){
-    this.paintPath();
+    setTimeout(() => {
+      this.paintPath();
+    }, 300)
+
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        this.paintPath()
+      }, 300)
+    });
   }
 
   /**
@@ -66,13 +74,15 @@ class PathMaker extends React.Component {
     waypoints.forEach(w => {
       const cur = w.ref.current;
 
-      waypointsCoords.push(
-        {
-          x: cur.offsetLeft + 0.5 * cur.clientWidth,
-          y: cur.offsetTop + 0.5 * cur.clientHeight,
-          h: cur.clientHeight
-        }
-      );
+      if(cur.offsetLeft){
+        waypointsCoords.push(
+          {
+            x: cur.offsetLeft + 0.5 * cur.clientWidth,
+            y: cur.offsetTop + 0.5 * cur.clientHeight,
+            h: cur.clientHeight
+          }
+        );
+      }
     })
 
     waypointsCoords.forEach((coord, i) => {
@@ -93,9 +103,17 @@ class PathMaker extends React.Component {
         pathDefinition += `M ${coord.x} ${coord.y} `;
       } else {
         //The first two coords are for the point that the path goes through. The last two are for the point that the path "bends" towards
-        pathDefinition += `S${coord.x},${coord.y}, ${coord.x + 100},${coord.y + 100} `;
+        if(window.innerWidth > 992){
+          pathDefinition += `S${coord.x},${coord.y}, ${coord.x + 100},${coord.y + 100} `;
+        } else {
+          if(i % 2 === 0){
+            pathDefinition += `S${coord.x + 50},${coord.y}, ${coord.x + 50},${coord.y + 50} `;
+          } else {
+            pathDefinition += `S${coord.x - 50},${coord.y}, ${coord.x + 50},${coord.y + 50} `;
+          }
+        }
 
-        console.log(coord);
+        //console.log(coord);
       }
     })
 
@@ -125,7 +143,9 @@ class PathMaker extends React.Component {
 
         return React.cloneElement(
           w,
-          { shown }
+          { 
+            shown
+          }
         )
       })
     }

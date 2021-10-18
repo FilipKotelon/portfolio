@@ -13,14 +13,40 @@ export const PathMakerContainer = styled.div`
 
 export const PathMakerWaypoint = styled.div`
   position: relative;
-  left: ${ ({ left }) => left ? left : '0'};
   transition: ${CssVars.transition};
-  opacity: ${ ({ shown }) => shown ? '1' : '0'};
+
+  @media(min-width: 577px){
+    opacity: ${ ({ shown }) => shown ? '1' : '0'};
+  }
+
+  @media(min-width: 1201px){
+    left: ${ ({ left }) => left ? left : '0'};
+  }
+
+  @media(max-width: 1200px) and (min-width: 993px){
+    left: ${ 
+      ({ left }) => parseInt(left.slice(0, -1)) < 40 
+        ? left 
+        : (parseInt(left.slice(0, -1)) - 15) + '%'
+    };
+  }
 `
 
 export const PathMakerChildrenContainer = styled.div`
   ${FlexMixins.display({ dir: 'column', ai: 'flex-start' })}
-  ${OtherMixins.mNotLast({ margin: '115px', dir: 'bottom'})}
+  
+  @media(min-width: 993px){
+    ${OtherMixins.mNotLast({ margin: '115px', dir: 'bottom'})}
+  }
+  
+  @media(max-width: 992px){
+    ${OtherMixins.mNotLast({ margin: '80px', dir: 'bottom'})}
+    align-items: center;
+  }
+  
+  @media(max-width: 576px){
+    ${OtherMixins.mNotLast({ margin: '30px', dir: 'bottom'})}
+  }
 `
 
 export const PathContainer = styled.svg`
