@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import FlexMixins from '../../utility/mixins/mixins-flex.styles'
 import OtherMixins from '../../utility/mixins/mixins-other.styles'
-import CssVars from '../../utility/variables.styles'
 import { ShadowBlock } from '../shadow-block/shadow-block.styles';
 import { Slide } from '../slide/slide.styles';
 

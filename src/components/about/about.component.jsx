@@ -2,7 +2,7 @@ import React from 'react'
 import PathMaker from '../pathmaker/pathmaker.component'
 import { PathMakerWaypoint } from '../pathmaker/pathmaker.styles'
 
-import { ShadowBlock, ShadowCard } from '../shadow-block/shadow-block.styles'
+import { ShadowCard } from '../shadow-block/shadow-block.styles'
 import { SectionTitle } from '../typography/typography.styles'
 import { AboutCard, AboutCardDesc, AboutCardNumber, AboutContainer } from './about.styles'
 
@@ -67,7 +67,7 @@ const About = () => (
           06
         </AboutCardNumber>
         <AboutCardDesc>
-          I love music. I play my acoustic guitar in the style of Tommy Emmanuel. Have you not heard of him? Here, check <a href="https://www.youtube.com/watch?v=S33tWZqXhnk" target="_blank" rel="nofollow">this video</a> out. Is your jaw on the floor? Mine still is after 2 years since I’ve first seen it. But I’ll learn this song one day.
+          I love music. I play my acoustic guitar in the style of Tommy Emmanuel. Have you not heard of him? Here, check <a href="https://www.youtube.com/watch?v=S33tWZqXhnk" target="_blank" rel="nofollow noreferrer">this video</a> out. Is your jaw on the floor? Mine still is after 2 years since I’ve first seen it. But I’ll learn this song one day.
         </AboutCardDesc>
       </PathMakerWaypoint>
 

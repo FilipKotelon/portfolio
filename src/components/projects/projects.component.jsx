@@ -3,7 +3,7 @@ import { useScrollSection } from 'react-scroll-section'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import { ProjectsContainer, ProjectsSectionDesc, SingleProject, SingleProjectImg, SingleProjectDesc, ProjectsSectionDescCard, SingleProjectComingSoon, SingleProjectTags, SingleProjectImgCon } from './projects.styles'
-import { SectionTitle, SmallDesc, MediumTitle, BigDesc, MediumDesc, Clickable, Tag } from '../typography/typography.styles'
+import { SectionTitle, SmallDesc, MediumTitle, MediumDesc, Clickable, Tag } from '../typography/typography.styles'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
 import SanctearyImg from '../../assets/photos/sancteary.png'
