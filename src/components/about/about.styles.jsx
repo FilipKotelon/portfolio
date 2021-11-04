@@ -71,6 +71,10 @@ export const AboutCardDesc = styled(MediumDesc)`
   margin-top: 6px;
   margin-left: 15px;
 
+  & a{
+    color: ${CssVars.colors.tanCrayola};
+  }
+
   @media(max-width: 768px){
     margin-top: 0;
     margin-left: 12px;
