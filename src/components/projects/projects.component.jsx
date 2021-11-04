@@ -2,7 +2,7 @@ import React from 'react'
 import { useScrollSection } from 'react-scroll-section'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import { ProjectsContainer, ProjectsSectionDesc, SingleProject, SingleProjectImg, SingleProjectDesc, ProjectsSectionDescCard, SingleProjectComingSoon, SingleProjectTags } from './projects.styles'
+import { ProjectsContainer, ProjectsSectionDesc, SingleProject, SingleProjectImg, SingleProjectDesc, ProjectsSectionDescCard, SingleProjectComingSoon, SingleProjectTags, SingleProjectImgCon } from './projects.styles'
 import { SectionTitle, SmallDesc, MediumTitle, BigDesc, MediumDesc, Clickable, Tag } from '../typography/typography.styles'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
@@ -32,13 +32,18 @@ const Projects = () => {
   
       <SingleProject>
 
-        <SingleProjectImg
-          as={ LazyLoadImage }
-          effect="blur"
-          src={ SolutionPeopleImg }
-          placeholderSrc={ SolutionPeopleImgMin }
-          className="single-project-img"
-        />
+        <SingleProjectImgCon
+          href="http://solution-people.mcleo.eu/"
+          target="_blank"
+        >
+          <SingleProjectImg
+            as={ LazyLoadImage }
+            effect="blur"
+            src={ SolutionPeopleImg }
+            placeholderSrc={ SolutionPeopleImgMin }
+            className="single-project-img"
+          />
+        </SingleProjectImgCon>
         <SingleProjectDesc bigPadding={true}>
           <MediumTitle>
             Solution People

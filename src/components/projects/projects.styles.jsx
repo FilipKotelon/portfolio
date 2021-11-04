@@ -74,6 +74,10 @@ export const SingleProjectImg = styled(CoverImage)`
   cursor: pointer;
 `
 
+export const SingleProjectImgCon = styled.a`
+
+`
+
 export const SingleProjectDesc = styled(ShadowCard)`
   position: relative;
   z-index: 1;
